@@ -9,6 +9,6 @@ package gerenciador;
  *
  * @author leona_000
  */
-public class ListaProdutos implements ListaProduto{
+public class GerenciadorDeArquivos {
     
 }
