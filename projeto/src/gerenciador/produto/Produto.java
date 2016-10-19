@@ -14,7 +14,18 @@ public abstract class Produto {
     private int codigo;
     private double preco;
     private String nome, descricao;
-
+    
+    
+    public Produto(){
+    }
+    
+    public Produto(int codigo, double preco, String nome, String descricao) {
+        this.codigo = codigo;
+        this.preco = preco;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+    
     public int getCodigo() {
         return codigo;
     }
@@ -52,7 +63,7 @@ public abstract class Produto {
         String str = "";
         str += "\nNome:" + nome;
         str += "\nDescricao: " + descricao;
-        return "Produto{" + "codigo=" + codigo + ", preco=" + preco;
+        return str;
     }
 
 }

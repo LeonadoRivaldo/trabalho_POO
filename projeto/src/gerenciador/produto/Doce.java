@@ -10,5 +10,41 @@ package gerenciador.produto;
  * @author leona_000
  */
 public abstract class Doce extends Produto {
-    
+
+    private String cobertura, sabor;
+
+    public Doce() {
+        super();
+    }
+
+    public Doce(String cobertura, String sabor, int codigo, double preco, String nome, String descricao) {
+        super(codigo, preco, nome, descricao);
+        this.cobertura = cobertura;
+        this.sabor = sabor;
+    }
+
+    public String getCobertura() {
+        return cobertura;
+    }
+
+    public void setCobertura(String cobertura) {
+        this.cobertura = cobertura;
+    }
+
+    public String getSabor() {
+        return sabor;
+    }
+
+    public void setSabor(String sabor) {
+        this.sabor = sabor;
+    }
+
+    @Override
+    public String toString() {
+        String str = super.toString();
+        str += "\ncobertura:" + cobertura;
+        str += "\nsabor:" + sabor;
+        return str;
+    }
+
 }
