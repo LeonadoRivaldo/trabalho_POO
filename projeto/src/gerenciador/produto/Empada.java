@@ -9,6 +9,36 @@ package gerenciador.produto;
  *
  * @author leona_000
  */
-public class Empada extends Salgado{
-    
+public class Empada extends Salgado {
+
+    private String tipo;
+
+    public Empada() {
+        super();
+    }
+
+    public Empada(String tipo, String sabor, int codigo, double preco, String nome, String descricao) {
+        super(sabor, codigo, preco, nome, descricao);
+        this.tipo = tipo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        String str = super.toString();
+        if (this.tipo.equalsIgnoreCase("doce")) {
+            str += "\nEmpada doce";
+        } else {
+            str += "\nEmpada Salgada";
+        }
+        return str;
+    }
+
 }

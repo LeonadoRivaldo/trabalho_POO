@@ -5,10 +5,17 @@
  */
 package gerenciador;
 
+import gerenciador.produto.Produto;
+
 /**
  *
  * @author leona_000
  */
 public interface ListaProduto {
+    
+    public boolean addProduto(Produto produto);
+    public boolean removeProduto(int indice);
+    public Produto getProduto( int codigo );
+    
     
 }
