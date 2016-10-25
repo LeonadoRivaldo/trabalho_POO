@@ -17,10 +17,12 @@ public class Empada extends Salgado {
         super();
     }
 
-    public Empada(String tipo, String sabor, int codigo, double preco, String nome, String descricao) {
-        super(sabor, codigo, preco, nome, descricao);
+    public Empada(String tipo, String sabor, int codigo, double preco, double peso, String nome, String descricao) {
+        super(sabor, codigo, preco, peso, nome, descricao);
         this.tipo = tipo;
     }
+
+
 
     public String getTipo() {
         return tipo;

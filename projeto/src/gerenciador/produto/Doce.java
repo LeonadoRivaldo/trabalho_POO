@@ -17,8 +17,8 @@ public abstract class Doce extends Produto {
         super();
     }
 
-    public Doce(String cobertura, String sabor, int codigo, double preco, String nome, String descricao) {
-        super(codigo, preco, nome, descricao);
+    public Doce(String cobertura, String sabor, int codigo, double preco, double peso, String nome, String descricao) {
+        super(codigo, preco, peso, nome, descricao);
         this.cobertura = cobertura;
         this.sabor = sabor;
     }

@@ -17,10 +17,12 @@ public abstract class Salgado extends Produto {
         super();
     }
 
-    public Salgado(String sabor, int codigo, double preco, String nome, String descricao) {
-        super(codigo, preco, nome, descricao);
+    public Salgado(String sabor, int codigo, double preco, double peso, String nome, String descricao) {
+        super(codigo, preco, peso, nome, descricao);
         this.sabor = sabor;
     }
+
+
 
     public String getSabor() {
         return sabor;

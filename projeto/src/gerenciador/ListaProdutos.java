@@ -5,27 +5,61 @@
  */
 package gerenciador;
 
+import java.util.List;
+import java.util.ArrayList;
 import gerenciador.produto.Produto;
 
 /**
  *
  * @author leona_000
  */
-public class ListaProdutos implements ListaProduto{
+public class ListaProdutos implements ListaProduto {
 
-    @Override
-    public boolean addProduto(Produto produto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private List<Produto> lista;
+
+    public ListaProdutos() {
+        lista = new ArrayList();
     }
 
     @Override
-    public boolean removeProduto(int indice) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean addProduto(Produto produto) {
+        Produto p = this.getProduto(produto.getCodigo());
+        if (p == null) {
+            return this.lista.add(produto);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean removeProduto(int codigo) {
+        Produto p = this.getProduto(codigo);
+        if (p != null) {
+            int cod = this.lista.indexOf(p);
+            lista.remove(cod);
+            return true;
+        }
+        return false;
     }
 
     @Override
     public Produto getProduto(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (Produto p : lista) {
+            if (p.getCodigo() == codigo) {
+                return p;
+            }
+        }
+        return null;
     }
-    
+
+    public String listaProdutos() {
+        String str = "";
+        str += "\n##################################";
+        str += "\nLista de produtos";
+        str += "\n==================================";
+        for (Produto p : lista) {
+            str += "\n" + p.toString();
+            str += "\n==================================";
+        }
+        return str;
+    }
 }

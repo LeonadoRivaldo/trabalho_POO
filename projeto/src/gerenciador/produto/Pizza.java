@@ -17,8 +17,8 @@ public class Pizza extends Salgado {
         super();
     }
 
-    public Pizza(boolean comBorda, String sabor, int codigo, double preco, String nome, String descricao) {
-        super(sabor, codigo, preco, nome, descricao);
+    public Pizza(boolean comBorda, String sabor, int codigo, double preco, double peso, String nome, String descricao) {
+        super(sabor, codigo, preco, peso, nome, descricao);
         this.comBorda = comBorda;
     }
 

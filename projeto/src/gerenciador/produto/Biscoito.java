@@ -37,8 +37,8 @@ public class Biscoito extends Doce {
         super();
     }
 
-    public Biscoito(boolean gotasDeChocolate, GotasChocolate saborGotas, String cobertura, String sabor, int codigo, double preco, String nome, String descricao) {
-        super(cobertura, sabor, codigo, preco, nome, descricao);
+    public Biscoito(boolean gotasDeChocolate, GotasChocolate saborGotas, String cobertura, String sabor, int codigo, double preco, double peso, String nome, String descricao) {
+        super(cobertura, sabor, codigo, preco, peso, nome, descricao);
         this.gotasDeChocolate = gotasDeChocolate;
         this.saborGotas = saborGotas;
     }

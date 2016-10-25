@@ -14,7 +14,7 @@ import gerenciador.produto.Produto;
 public interface ListaProduto {
     
     public boolean addProduto(Produto produto);
-    public boolean removeProduto(int indice);
+    public boolean removeProduto(int codigo);
     public Produto getProduto( int codigo );
     
     

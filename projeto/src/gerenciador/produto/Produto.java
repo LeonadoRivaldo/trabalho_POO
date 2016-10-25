@@ -12,20 +12,28 @@ package gerenciador.produto;
 public abstract class Produto {
 
     private int codigo;
-    private double preco;
+    private double preco, peso;
     private String nome, descricao;
-    
-    
-    public Produto(){
+
+    public Produto() {
     }
-    
-    public Produto(int codigo, double preco, String nome, String descricao) {
+
+    public Produto(int codigo, double preco, double peso, String nome, String descricao) {
         this.codigo = codigo;
         this.preco = preco;
+        this.peso = peso;
         this.nome = nome;
         this.descricao = descricao;
     }
-    
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
     public int getCodigo() {
         return codigo;
     }

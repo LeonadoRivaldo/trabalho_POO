@@ -17,8 +17,8 @@ public class Bolo extends Doce {
         super();
     }
 
-    public Bolo(String recheio, String cobertura, String sabor, int codigo, double preco, String nome, String descricao) {
-        super(cobertura, sabor, codigo, preco, nome, descricao);
+    public Bolo(String recheio, String cobertura, String sabor, int codigo, double preco, double peso, String nome, String descricao) {
+        super(cobertura, sabor, codigo, preco, peso, nome, descricao);
         this.recheio = recheio;
     }
 

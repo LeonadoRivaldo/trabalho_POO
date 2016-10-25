@@ -5,6 +5,7 @@
  */
 package gerenciador;
 
+import gerenciador.pedido.Pedido;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,4 +28,26 @@ import java.util.logging.Logger;
  * @author leona_000
  */
 public class GerenciadorDeArquivos {
+
+    public static void gravaArquivo(String file, String conteudo) throws FileNotFoundException, IOException {
+        File files = new File(file);
+        if (!files.exists()) {
+            files.mkdirs();
+        }
+        FileOutputStream outFile = new FileOutputStream(file);
+        BufferedWriter buff = new BufferedWriter(new FileWriter(file));
+        buff.write(conteudo);
+        buff.close();
+        outFile.close();
+    }
+
+    private void escreveArquivoBinario(String dir, List<Pedido> lista) throws FileNotFoundException, IOException {
+        String fileNameSe = "\\todosOsPedidos";
+        FileOutputStream outFileSe = new FileOutputStream(dir + fileNameSe);
+        ObjectOutputStream out = new ObjectOutputStream(outFileSe);
+        out.writeObject(lista);
+        outFileSe.close();
+        out.close();
+    }
+
 }

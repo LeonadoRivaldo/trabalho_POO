@@ -17,10 +17,12 @@ public class Pao extends Produto {
         super();
     }
 
-    public Pao(TipoPao tipo, int codigo, double preco, String nome, String descricao) {
-        super(codigo, preco, nome, descricao);
+    public Pao(TipoPao tipo, int codigo, double preco, double peso, String nome, String descricao) {
+        super(codigo, preco, peso, nome, descricao);
         this.tipo = tipo;
     }
+
+
 
     public String getTipo() {
         if (tipo.getTipo() == 1) {
